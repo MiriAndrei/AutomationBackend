@@ -20,7 +20,7 @@ import java.time.Duration;
         public void openBrowser() {
             configureBrowser();
             driver = new ChromeDriver(chromeOptions);
-            driver.get("https://demoqa.com");
+            driver.get("https://demoqa.com/login");
 
 
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));

@@ -6,8 +6,10 @@ import io.restassured.specification.RequestSpecification;
 import org.json.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import pages.LoginPage;
+import sharedData.SharedData;
 
-public class CreateUserTest {
+public class CreateUserTest extends SharedData {
     @Test
 
     public void testMethod(){
@@ -31,5 +33,9 @@ public class CreateUserTest {
 
         Assert.assertEquals(response.getStatusCode(),201);
         Assert.assertTrue(response.getStatusLine().contains("Created"));
+
+        LoginPage loginPage = new LoginPage(getDriver());
+        loginPage.loginMethod(requestBody.get("userName").toString(),requestBody.get("password").toString());
+
     }
 }
