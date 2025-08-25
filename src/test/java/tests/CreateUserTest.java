@@ -6,8 +6,8 @@ import io.restassured.specification.RequestSpecification;
 import org.json.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.LoginPage;
-import sharedData.SharedData;
+import frontEnd.pages.LoginPage;
+import frontEnd.sharedData.SharedData;
 
 public class CreateUserTest extends SharedData {
     @Test

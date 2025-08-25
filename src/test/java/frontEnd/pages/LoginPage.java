@@ -1,8 +1,6 @@
-package pages;
+package frontEnd.pages;
 
-import com.fasterxml.jackson.databind.ser.Serializers;
 import logger.LoggerUtility;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

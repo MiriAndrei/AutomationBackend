@@ -1,10 +1,7 @@
 package logger;
 
-import helpers.ElementHelper;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.PageFactory;
 
 public class LoggerUtility {
     private static Logger logger = LogManager.getLogger();

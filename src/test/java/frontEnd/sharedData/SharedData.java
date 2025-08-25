@@ -1,4 +1,4 @@
-package sharedData;
+package frontEnd.sharedData;
 
 import logger.LoggerUtility;
 import org.openqa.selenium.WebDriver;
@@ -22,11 +22,11 @@ public class SharedData {
                 chromeBrowser.openBrowser();
                 driver = chromeBrowser.getDriver();
                 break;
-//            case "Firefox":
-//                FirefoxBrowser edgeBrowser = new FirefoxBrowser();
-//                edgeBrowser.openBrowser();
-//                driver = edgeBrowser.getDriver();
-//                break;
+            case "Firefox":
+                FirefoxBrowser edgeBrowser = new FirefoxBrowser();
+                edgeBrowser.openBrowser();
+                driver = edgeBrowser.getDriver();
+                break;
         }
 
         LoggerUtility.infoLog("The browser "+browser+" was opened with success");

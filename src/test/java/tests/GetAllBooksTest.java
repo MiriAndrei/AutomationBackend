@@ -6,8 +6,6 @@ import io.restassured.specification.RequestSpecification;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import static io.restassured.RestAssured.requestSpecification;
-
 public class GetAllBooksTest {
 
     @Test

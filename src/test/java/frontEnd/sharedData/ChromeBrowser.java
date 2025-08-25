@@ -1,17 +1,12 @@
-package sharedData;
+package frontEnd.sharedData;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.time.Duration;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 
-import java.time.Duration;
-
-    public class ChromeBrowser implements Browser {
+public class ChromeBrowser implements Browser {
         private WebDriver driver;
         private ChromeOptions chromeOptions;
 

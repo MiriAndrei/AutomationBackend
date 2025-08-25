@@ -4,12 +4,10 @@ import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.json.JSONObject;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.BasePage;
-import pages.LoginPage;
-import sharedData.SharedData;
+import frontEnd.pages.LoginPage;
+import frontEnd.sharedData.SharedData;
 
 public class DeleteUserTest extends SharedData {
 
@@ -70,7 +68,7 @@ public class DeleteUserTest extends SharedData {
         Assert.assertTrue(response.getStatusLine().contains("No Content"));
 
         System.out.println("==Step 5: Get User==");
-//        requestSpecification.header("Authorization", "Bearer "+token);
+//       requestSpecification.header("Authorization", "Bearer "+token);
         response = requestSpecification.get("/Account/v1/User/"+userId);
         System.out.println(response.getStatusLine());
         response.getBody().prettyPrint();
@@ -81,11 +79,6 @@ public class DeleteUserTest extends SharedData {
         LoginPage loginPage = new LoginPage(getDriver());
         loginPage.loginMethod(requestBody.get("userName").toString(),requestBody.get("password").toString());
         loginPage.validateInvalidLogin();
-
-
-
-
-
 
     }
 }
